@@ -1,4 +1,3 @@
 Rails.application.routes.draw do
-  root 'articles#index'
-  git 
+  get 'articles' => 'articles#index'
 end
