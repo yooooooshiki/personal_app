@@ -21,9 +21,11 @@ body,html {
       .item-title {
         height: 5%;
         border: 1px solid #e8e8e8;
-        font-size: 20px;
+        font-size: 25px;
         vertical-align: middle;
-        padding: 1%;
+        padding: 3px 3px 3px 100px;
+        font-family: impact;
+        opacity: 0.4;
       }
       .item-list {
         height:90px;

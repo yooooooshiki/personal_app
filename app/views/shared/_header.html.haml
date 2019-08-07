@@ -1,13 +1,14 @@
 .header
   .header-light
     .appname 
-      Wisdom Post
+      = link_to 'Wisdom Post', articles_path, class: 'btn'
     .search
       %input.search-inner
   .header-right
     .stock
-      = link_to 'ストック一覧', 'https://qiita.com/'
+      = link_to 'Stock', 'https://qiita.com/', class: 'btn'
     .post
-      投稿する
+      =link_to 'Post', new_article_path, class: 'btn'
+      
     .mypage
-      マイページへ
+      Mypage

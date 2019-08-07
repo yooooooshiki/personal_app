@@ -1,5 +1,5 @@
   .header {
-  background-color: #55c500;;
+  background-color: #55c500;
   height: 60px;
   z-index: 10;
   border-bottom: 2px solid #CCC;
@@ -15,12 +15,13 @@
         width: 150px;
         height: 100%;
         box-sizing: border-box;
-        margin: 0 40px;
+        margin: 0 20px;
         display: flex;
         align-items: center;
         text-align: center;
-        font-size: 28px;
+        font-size: 30px;
         font-family: impact;
+        opacity: 0.4;
       }
       .search {
         width: 200px;
@@ -31,6 +32,7 @@
           box-sizing: border-box;
           border: none;
           margin: 15px 0 10px;
+          border-radius: 0.25rem;
         }
       
       }  
@@ -39,20 +41,31 @@
       width: 500px;
       display: flex;
       justify-content: flex-end;
+      font-family: impact;
+      font-size: 25px;
+      opacity: 0.4;
       .stock {
         width: 30%;
-        padding: 20px;
+        padding: 10px;
         text-align: center;
+        line-height: 40px;
+        text-decoration: none;
       }
       .post {
         width: 30%;
-        padding: 20px;
+        padding: 10px;
         text-align: center;
+        line-height: 40px;
       }
       .mypage {
         width: 30%;
-        padding: 20px;
+        padding: 10px;
         text-align: center;
+        line-height: 40px;
       }
     }
   }  
+
+.btn {
+  text-decoration: none;
+}
