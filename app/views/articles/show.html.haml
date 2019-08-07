@@ -1,0 +1,24 @@
+= render 'shared/header'
+.container
+  .comment-page-reputation
+    .comment-good       
+      イイね
+    .comment-stock
+      ストック
+    .comment-sns
+      Twitter
+  .comment-page-info
+    .commnet-page-title
+      今日はこうゆう日でした。
+    .comment-page-user
+      yoooshiki
+    .comment-page-editbtn
+      Edit
+    .comment-page-delete
+      Delete
+  .comment-page-content
+    今日はこうゆう事がありました。
+  .comment-page-form-block
+    %input.comment-page-form
+    %input.comment-page-form-btn{ type: 'submit', name: '', value: 'Comment'}
+  = render 'shared/footer'
