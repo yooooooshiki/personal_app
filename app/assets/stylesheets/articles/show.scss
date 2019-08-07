@@ -1,0 +1,55 @@
+.container {
+  .comment-page-reputation {
+    display: flex;
+    margin-bottom: 5px;
+    .comment-good {
+    }
+    .comment-stock {
+    }
+    .comment-sns {
+
+    }
+  }
+  .comment-page-info {
+    width: 100%;
+    margin-bottom: 5px;
+    display: flex;
+    .commnet-page-title {
+      width: 60%;
+      margin-bottom: 30px;
+      font-size: 40px;
+    }
+    .comment-page-user {
+      width: 20%;
+      margin-top: 10px;
+      margin-right: 30px;
+    }
+    .comment-page-editbtn {
+      margin-top: 10px;
+      width: 10%; 
+    }
+    .comment-page-delete {
+      margin-top: 10px;
+      width: 10%;
+    }
+  }
+
+  .comment-page-content {
+    margin-bottom: 50px;
+  }
+  .comment-page-form-block {
+    .comment-page-form {
+      width: 100%;
+      height: 200px;
+      margin-bottom: 30px;
+      border-radius: 0.25rem;
+    }
+    .comment-page-form-btn {
+      display: block;
+      margin:0 0 0 auto;
+      background-color: #55c500;
+      border-radius: 0.25rem;
+      font-family: impact;
+    }
+  }
+}
