@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  get 'articles' => 'articles#index'
+  resources :articles, only: [:index, :new]
+  resources :users, only: [:index]
 end
