@@ -1,10 +1,10 @@
   .header {
-  background-color: #55c500;
-  height: 60px;
-  z-index: 10;
-  border-bottom: 2px solid #CCC;
-  padding: 20px 50px 20px;
-  display: flex;
+    background-color: #55c500;
+    height: 60px;
+    z-index: 10;
+    border-bottom: 2px solid #CCC;
+    padding: 20px 50px 20px;
+    display: flex;
     .header-light {
       width: 700px;
       height: 100%;
@@ -43,29 +43,37 @@
       justify-content: flex-end;
       font-family: impact;
       font-size: 25px;
-      opacity: 0.4;
-      .stock {
-        width: 30%;
-        padding: 10px;
-        text-align: center;
-        line-height: 40px;
-        text-decoration: none;
-      }
-      .post {
-        width: 30%;
-        padding: 10px;
-        text-align: center;
-        line-height: 40px;
-      }
-      .mypage {
-        width: 30%;
-        padding: 10px;
-        text-align: center;
-        line-height: 40px;
-      }
+      opacity: 0.3;
+      .header-right-wrapper {
+        display: flex;
+        .stock {
+          width: 30%;
+          padding: 10px;
+          text-align: center;
+          line-height: 40px;
+          text-decoration: none;
+        }
+        .post {
+          width: 30%;
+          padding: 10px;
+          text-align: center;
+          line-height: 40px;
+        }
+        .mypage {
+          width: 30%;
+          padding: 10px;
+          text-align: center;
+          line-height: 40px;
+        }
+      }    
     }
   }  
 
 .btn {
   text-decoration: none;
+}
+
+.btn-in {
+  margin-right: 10px;
+  vertical-align: middle;
 }
