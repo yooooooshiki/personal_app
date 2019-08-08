@@ -5,10 +5,20 @@
     .search
       %input.search-inner
   .header-right
-    .stock
-      = link_to 'Stock', 'https://qiita.com/', class: 'btn'
-    .post
-      =link_to 'Post', new_article_path, class: 'btn'
+    - if user_signed_in?
+      .header-right-wrapper
+        .stock
+          = link_to 'Stock', 'https://qiita.com/', class: 'btn'
+        .post
+          =link_to 'Post', new_article_path, class: 'btn'
+          
+        .mypage
+          Mypage
+    - else 
+      .header-right-wrapper
+        .login-btn
+          = link_to 'Login', new_user_session_path, class: 'btn-in'
+        .sign-up-btn
+          =link_to 'Sign-up', new_user_registration_path, class: 'btn-in'
+          
       
-    .mypage
-      Mypage
