@@ -12,7 +12,8 @@
               %img{ alt: '', src: '', width: 'auto', height: 'auto'}
             .item-list-big
               .item-list-content
-                = article.title
+                = link_to article_path(article.id) do
+                  = article.title
               .item-list-under
                 %span.user1
                   by
