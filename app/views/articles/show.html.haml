@@ -9,15 +9,15 @@
       Twitter
   .comment-page-info
     .commnet-page-title
-      aaaaaaa
+      = @article.title
     .comment-page-user
-      yoooshiki
+      = @article.user.name
     .comment-page-editbtn
       Edit
     .comment-page-delete
       Delete
   .comment-page-content
-    ddddd
+    = @article.content
   .comment-page-form-block
     %input.comment-page-form
     %input.comment-page-form-btn{ type: 'submit', name: '', value: 'Comment'}
