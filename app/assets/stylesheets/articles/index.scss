@@ -35,7 +35,7 @@ body,html {
           border: 1px solid #e8e8e8;
           box-sizing: border-box;
           display: flex;
-          opacity: 0.4;
+          // opacity: 0.4;
           .item-list-image {
             width: 80px;
             height: 80px;
@@ -96,6 +96,18 @@ body,html {
 
 a {
   margin: 0 4px 0 4px;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline currentColor;
+}
+a:link {
+  color: black;
+  opacity: 1.0 !important;   
+}
+a:visited {
+  color: #696969;
+  opacity: 0.4;
 }
 
 .pagination>li>a {
