@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root 'articles#index'
-  resources :articles, only: [:index, :new, :show]
+  resources :articles, only: [:index, :new, :show, :create]
   resources :users, only: [:index]
   devise_scope :user do
     get 'sign_up', to: 'users/registrations#new'

@@ -5,29 +5,31 @@
     .hoge2
       .item-title
         Articles
-      .item-list
-        %a.item-list-image{ href: ''}
-          %img{ alt: '', src: '', width: 'auto', height: 'auto'}
-        .item-list-big
-          .item-list-content
-            今日はこうゆう事がありました。
-          .item-list-under
-            %span.user1
-              by
-              %a.user2
-                yooooshkiki
-            .time
-              2019/8/4
-            .good-mark
-              %a.comment
-                .action
-                  コ
-              %a.good
-                .action
-                  い
-              %a.stock
-                .action
-                  ス
+      .item-list-block
+        - @articles.each do |article|
+          .item-list.clearfix
+            %a.item-list-image{ href: ''}
+              %img{ alt: '', src: '', width: 'auto', height: 'auto'}
+            .item-list-big
+              .item-list-content
+                = article.title
+              .item-list-under
+                %span.user1
+                  by
+                %a.user2
+                  = article.user.name
+                .time
+                  2019/8/4
+                .good-mark
+                  %a.comment
+                    .action
+                      コ
+                  %a.good
+                    .action
+                      い
+                  %a.stock
+                    .action
+                      ス
+      = paginate(@articles)
     .hoge3
-  .footer
-    Created by yooooshiki
+  = render 'shared/footer'
