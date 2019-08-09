@@ -19,7 +19,8 @@
                 %a.user2
                   = article.user.name
                 .time
-                  2019/8/4
+                  = article.updated_at.strftime("%Y/%m/%d")
+
                 .good-mark
                   %a.comment
                     .action
