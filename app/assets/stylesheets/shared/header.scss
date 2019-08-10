@@ -11,6 +11,7 @@
       margin: 0 40px;
       box-sizing: border-box;
       display: flex; 
+      text-decoration: none;
       .appname {
         width: 150px;
         height: 100%;
@@ -69,11 +70,16 @@
     }
   }  
 
-.btn {
-  text-decoration: none;
-}
-
 .btn-in {
   margin-right: 10px;
   vertical-align: middle;
+  text-decoration-color: none;
+}
+
+.btn-in a:link {
+  color: black;
+}
+
+.btn-in a:visited {
+  color:  black;
 }

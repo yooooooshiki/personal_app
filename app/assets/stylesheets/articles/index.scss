@@ -98,14 +98,14 @@ a {
   margin: 0 4px 0 4px;
   text-decoration: none;
 }
-a:hover {
+.item-list-block a:hover {
   text-decoration: underline currentColor;
 }
-a:link {
+.item-list-block a:link {
   color: black;
   opacity: 1.0 !important;   
 }
-a:visited {
+.item-list-block a:visited {
   color: #696969;
   opacity: 0.4;
 }
