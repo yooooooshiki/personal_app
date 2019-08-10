@@ -13,9 +13,9 @@
     .comment-page-user
       = @article.user.name
     .comment-page-editbtn
-      Edit
+      = link_to "Edit", edit_article_path(@article.id)
     .comment-page-delete
-      Delete
+      = link_to "Delete", article_path, method: :delete
   .comment-page-content
     = @article.content
   .comment-page-form-block
