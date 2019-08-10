@@ -1,19 +1,19 @@
 .header
   .header-light
     .appname 
-      = link_to 'Wisdom Post', articles_path, class: 'btn'
+      = link_to 'Wisdom Post', articles_path, class: 'btn-in'
     .search
       %input.search-inner
   .header-right
     - if user_signed_in?
       .header-right-wrapper
         .stock
-          = link_to 'Stock', 'https://qiita.com/', class: 'btn'
+          = link_to 'Stock', 'https://qiita.com/', class: 'btn-in'
         .post
-          =link_to 'Post', new_article_path, class: 'btn'
+          =link_to 'Post', new_article_path, class: 'btn-in'
           
         .mypage
-          Mypage
+          =link_to 'Mypage', '#', class: 'btn-in'
     - else 
       .header-right-wrapper
         .login-btn

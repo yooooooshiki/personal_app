@@ -1,15 +1,3 @@
 = render 'shared/header'
-.container
-  %form.form-content
-  = form_with model: @article, url: "/articles", method: "post" do |f|
-    .form-title
-      %lavel.title-lavel
-        title
-      = f.text_field :title, class: "title_name", placeholder: 'タイトルを入力してください'
-    .main-content
-      %lavel.content-lavel
-        content
-      = f.text_field :content, class: "content_name",  placeholder: '本文を入力してください'
-    .post-btn
-      = f.submit "send",class: "btn-red"
-  = render 'shared/footer'
+= render 'shared/form'
+= render 'shared/footer'

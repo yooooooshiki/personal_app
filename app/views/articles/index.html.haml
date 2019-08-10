@@ -12,14 +12,15 @@
               %img{ alt: '', src: '', width: 'auto', height: 'auto'}
             .item-list-big
               .item-list-content
-                = article.title
+                = link_to article_path(article.id) do
+                  = article.title
               .item-list-under
                 %span.user1
                   by
                 %a.user2
                   = article.user.name
                 .time
-                  2019/8/4
+                  = article.updated_at.strftime("%Y/%m/%d")
                 .good-mark
                   %a.comment
                     .action
@@ -30,6 +31,7 @@
                   %a.stock
                     .action
                       ス
-      = paginate(@articles)
+      .pagination
+        = paginate(@articles)
     .hoge3
   = render 'shared/footer'
