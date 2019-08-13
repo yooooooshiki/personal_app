@@ -19,7 +19,17 @@
       = link_to "Delete", article_path, method: :delete
   .comment-page-content
     = @article.content
-  .comment-page-form-block
-    %input.comment-page-form
-    %input.comment-page-form-btn{ type: 'submit', name: '', value: 'Comment'}
-  = render 'shared/footer'
+  -# .comment-page-form-block
+  -#   %input.comment-page-form
+  -#   %input.comment-page-form-btn{ type: 'submit', name: '', value: 'Comment'}
+  -# = render 'shared/footer'
+
+  %div
+  %h4 コメント
+  #comments_area
+    / #①
+    / 投稿されたコメント一覧をブログの詳細ページに表示するためのrender
+    = render partial: 'comments/index', locals: { comments: @comments }
+  - if user_signed_in?
+    / コメント入力欄をブログの詳細ページに表示するためのrender
+    = render partial: 'comments/form', locals: { comment: @comment, article: @article }
