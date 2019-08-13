@@ -2,7 +2,8 @@
 .container
   .comment-page-reputation
     .comment-good       
-      イイね
+      %span{:id => "article-#{@article.id}-like"}
+        = render 'shared/likes', article: @article, like: @like
     .comment-stock
       ストック
     .comment-sns
