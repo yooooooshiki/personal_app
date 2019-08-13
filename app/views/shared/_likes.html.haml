@@ -1,0 +1,15 @@
+- if user_signed_in?
+  - if article.like_user(current_user.id)
+    = button_to like_path(article, like), method: :delete, remote: true do
+      %i.fas.fa-heart
+      %span
+        = article.likes_count
+  - else
+    = button_to article_likes_path(article), remote: true do
+      %i.far.fa-heart
+      %span
+        = article.likes_count
+- else
+  %i.far.fa-heart
+  %span
+    = article.likes_count
