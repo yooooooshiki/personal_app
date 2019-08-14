@@ -20,6 +20,8 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+    @comment = Comment.new #①
+    @comments = @article.comments #②
     @like = Like.find_by(user_id: current_user.id, article_id: params[:id]) if user_signed_in?
   end
 

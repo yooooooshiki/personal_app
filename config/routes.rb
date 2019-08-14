@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
   devise_for :users
   root 'articles#index'
-  delete '/articles/:article_id/likes/:id', to: 'likes#destroy' ,as: :like
+  # delete '/articles/:article_id/likes/:id', to: 'likes#destroy' ,as: :like
   
   resources :articles do
-    resources :likes, :only => [:create, :destroy] 
+    resources :likes, only: [:create, :destroy] 
+  end
+
+  resources :articles do
+    resources :comments
   end
 
   resources :users, only: [:index]
