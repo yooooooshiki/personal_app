@@ -18,7 +18,7 @@
     .comment-page-delete
       = link_to "Delete", article_path, method: :delete
   .comment-page-content
-    = @article.content
+    = simple_format(@article.content)    
   -# .comment-page-form-block
   -#   %input.comment-page-form
   -#   %input.comment-page-form-btn{ type: 'submit', name: '', value: 'Comment'}
