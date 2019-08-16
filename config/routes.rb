@@ -11,6 +11,8 @@ Rails.application.routes.draw do
     resources :comments
   end
 
+  resources :relationships, only: [:create, :destroy]
+  
   resources :users, only: [:index]
   devise_scope :user do
     get 'sign_up', to: 'users/registrations#new'
