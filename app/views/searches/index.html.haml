@@ -1,8 +1,6 @@
 = render 'shared/header'
-= search_form_for @q, url: searches_path do |f| 
-  = f.search_field :title_cont, placeholder: "検索ワード"
-  = f.submit value: "検索"
-
 - if @article.any?
   - @article.each do |result|
-    %p= result.title
+    = link_to article_path(result.id) do 
+      %p= result.title
+      
