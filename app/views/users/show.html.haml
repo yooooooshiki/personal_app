@@ -1,1 +1,4 @@
 = render 'shared/header'
+
+- @user.articles.each do |article|  
+  = article.title
