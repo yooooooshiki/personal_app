@@ -4,6 +4,7 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.order("created_at DESC").page(params[:page]).per(10)
     @articles ||= Post.page(params[:page]).per(10)
+    # @user = current_user
   end
 
   def new
