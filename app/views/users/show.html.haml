@@ -1,4 +1,17 @@
 = render 'shared/header'
+= current_user.name
 
-- @user.articles.each do |article|  
-  = article.title
+= link_to "ログアウト", destroy_user_session_path, method: :delete
+
+%h3 お気に入りの本
+%table
+  %thead
+    %tr
+      %th 削除
+      %th タイトル
+      %th 価格
+  %tbody
+    - @user.articles.each do |article|
+      %tr
+        %td= article.title
+    

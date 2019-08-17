@@ -1,8 +1,0 @@
-= render 'shared/header'
-= current_user.name
-
--# - @user.articles.each_with_index do |article, i|
--#   = link_to "削除",favorite_path(@favorites[i][:id]), method: :delete
--# = article.title
-
-= link_to "ログアウト", destroy_user_session_path, method: :delete
