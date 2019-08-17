@@ -27,15 +27,8 @@
       .search {
         width: 200px;
         height: 50px;
-        .search-inner {
-          width: 100%;
-          height: 30px;
-          box-sizing: border-box;
-          border: none;
-          margin: 15px 0 10px;
-          border-radius: 0.25rem;
-        }
-      
+        display: flex;  
+        line-height: 60px;
       }  
     }
     .header-right {

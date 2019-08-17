@@ -2,8 +2,9 @@
   .header-light
     .appname 
       = link_to 'Wisdom Post', articles_path, class: 'btn-in'
-    .search
-      %input.search-inner
+    .search 
+      = search_form_for @q, url: searches_path do |f| 
+        = f.search_field :title_cont, placeholder: "検索ワード" 
   .header-right
     - if user_signed_in?
       .header-right-wrapper
@@ -13,7 +14,7 @@
           =link_to 'Post', new_article_path, class: 'btn-in'
           
         .mypage
-          =link_to 'Mypage', '#', class: 'btn-in'
+          =link_to 'Mypage', searches_path, class: 'btn-in'
     - else 
       .header-right-wrapper
         .login-btn

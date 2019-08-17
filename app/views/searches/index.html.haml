@@ -1,0 +1,6 @@
+= render 'shared/header'
+- if @article.any?
+  - @article.each do |result|
+    = link_to article_path(result.id) do 
+      %p= result.title
+      
