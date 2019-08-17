@@ -3,4 +3,6 @@
   - @article.each do |result|
     = link_to article_path(result.id) do 
       %p= result.title
+      %p= result.user.name
+      %p= result.updated_at.strftime("%Y/%m/%d")
       
