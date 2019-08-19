@@ -1,5 +1,5 @@
 = render 'shared/header'
-= current_user.name
+= @user.name
 
 = link_to "ログアウト", destroy_user_session_path, method: :delete
 
