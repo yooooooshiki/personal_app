@@ -11,8 +11,18 @@ Rails.application.routes.draw do
     resources :comments
   end
 
-  resources :searches, only: [:index]
-  resources :users, only: [:index]
+  resources :articles do
+    member do #本一覧画面からお気に入り登録をする
+      post "add", to: "favorites#create"
+    end
+  end
+
+  resources :favorites, only: [:destroy]
+
+  resources :searches, only: [:index, :show]
+  # resource :sessions, only: [:new, :create, :destroy]
+
+  resources :users, only: [:show]
   devise_scope :user do
     get 'sign_up', to: 'users/registrations#new'
     get '/users/sign_out', to: 'devise/sessions#destroy'

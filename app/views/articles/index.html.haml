@@ -30,7 +30,7 @@
                       い
                   %a.stock
                     .action
-                      ス
+                      = link_to "登録", add_article_path(article), method: :post 
       .pagination
         = paginate(@articles)
     .hoge3

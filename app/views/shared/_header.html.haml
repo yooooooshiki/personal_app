@@ -11,10 +11,10 @@
         .stock
           = link_to 'Stock', 'https://qiita.com/', class: 'btn-in'
         .post
-          =link_to 'Post', new_article_path, class: 'btn-in'
+          = link_to 'Post', new_article_path, class: 'btn-in'
           
         .mypage
-          =link_to 'Mypage', searches_path, class: 'btn-in'
+          = link_to 'Mypage', "/users/#{current_user.id}", class: 'btn-in'
     - else 
       .header-right-wrapper
         .login-btn
