@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   resources :favorites, only: [:destroy]
 
   resources :searches, only: [:index, :show]
-  resource :sessions, only: [:new, :create, :destroy]
+  # resource :sessions, only: [:new, :create, :destroy]
 
   resources :users, only: [:show]
   devise_scope :user do

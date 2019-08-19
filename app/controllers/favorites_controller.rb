@@ -11,7 +11,7 @@ class FavoritesController < ApplicationController
   def destroy
     @favorite = Favorite.find(params[:id])
     if @favorite.destroy
-      redirect_to articles_path
+      redirect_to user_path(current_user)
     end
   end
 end
