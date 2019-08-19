@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   resources :searches, only: [:index, :show]
   # resource :sessions, only: [:new, :create, :destroy]
 
-  resources :users, only: [:show]
+  resources :users
   devise_scope :user do
     get 'sign_up', to: 'users/registrations#new'
     get '/users/sign_out', to: 'devise/sessions#destroy'
