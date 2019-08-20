@@ -6,3 +6,6 @@
 - @user.articles.each_with_index do |article, i|
   = link_to "削除", favorite_path(@favorites[i][:id]), method: :delete
   = article.title
+
+= render 'follow_form'
+= render 'stats'
