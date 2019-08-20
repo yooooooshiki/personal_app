@@ -1,0 +1,9 @@
+= render 'shared/header'
+%h1 ユーザー一覧
+- @users.each do |user|
+  = user.name
+  %br/
+  = link_to("#{user.name}のページだよ。", user_path(user.id) )
+  %br/
+
+

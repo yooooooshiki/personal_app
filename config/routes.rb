@@ -17,12 +17,21 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
+
+  resources :relationships, only: [:create, :destroy]
+
+
   resources :favorites, only: [:destroy]
 
   resources :searches, only: [:index, :show]
   # resource :sessions, only: [:new, :create, :destroy]
 
-  resources :users, only: [:show]
+  resources :users
   devise_scope :user do
     get 'sign_up', to: 'users/registrations#new'
     get '/users/sign_out', to: 'devise/sessions#destroy'
