@@ -1,28 +1,28 @@
 = render 'shared/header'
-.user-profile
-  = @user.name
-.tabs
-  %input#all{:checked => "checked", :name => "tab_item", :type => "radio"}/
-  %label.tab_item{:for => "all"} 
-    %i.fas.fa-pencil-alt
-  %input#programming{:name => "tab_item", :type => "radio"}/
-  %label.tab_item{:for => "programming"}
-    %i.fas.fa-folder-open
-  %input#design{:name => "tab_item", :type => "radio"}/
-  %label.tab_item{:for => "design"} 
-    %i.fas.fa-users
-  #all_content.tab_content
-    総合の内容がここに入ります
-  #programming_content.tab_content
-    - @user.articles.each_with_index do |article, i|
-      .tab-content-nakami
-        = link_to "削除", favorite_path(@favorites[i][:id]), method: :delete
-        = article.title
-  #design_content.tab_content
-    .tab-content-nakami
-      = render 'follow_form'
-      = render 'stats'
-= render 'shared/footer'
+-# .user-profile
+-#   = @user.name
+-# .tabs
+-#   %input#all{:checked => "checked", :name => "tab_item", :type => "radio"}/
+-#   %label.tab_item{:for => "all"} 
+-#     %i.fas.fa-pencil-alt
+-#   %input#programming{:name => "tab_item", :type => "radio"}/
+-#   %label.tab_item{:for => "programming"}
+-#     %i.fas.fa-folder-open
+-#   %input#design{:name => "tab_item", :type => "radio"}/
+-#   %label.tab_item{:for => "design"} 
+-#     %i.fas.fa-users
+-#   #all_content.tab_content
+-#     総合の内容がここに入ります
+-#   #programming_content.tab_content
+-#     - @user.articles.each_with_index do |article, i|
+-#       .tab-content-nakami
+-#         = link_to "削除", favorite_path(@favorites[i][:id]), method: :delete
+-#         = article.title
+-#   #design_content.tab_content
+-#     .tab-content-nakami
+-#       = render 'follow_form'
+-#       = render 'stats'
+-# = render 'shared/footer'
 
 
 
