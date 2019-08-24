@@ -1,6 +1,7 @@
 = render 'shared/header'
 .user-profile
   = @user.name
+  = link_to "ログアウト", destroy_user_session_path, method: :delete
 .tabs
   %input#all{:checked => "checked", :name => "tab_item", :type => "radio"}/
   %label.tab_item{:for => "all"} 
@@ -63,7 +64,7 @@
 
 
 
--# = link_to "ログアウト", destroy_user_session_path, method: :delete
+= link_to "ログアウト", destroy_user_session_path, method: :delete
 
 
 
