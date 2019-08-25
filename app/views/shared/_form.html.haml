@@ -1,6 +1,6 @@
 .container
   .form-content
-    = form_with model: @article, url: "/articles", method: "post" do |f|
+    = form_with model: @article, url: "/articles/", local: true, method: "post" do |f|
       .form-title
         %lavel.title-lavel
           title
