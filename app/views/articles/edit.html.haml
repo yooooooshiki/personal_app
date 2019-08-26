@@ -1,7 +1,7 @@
 = render 'shared/header'
 .container
   .form-content
-    = form_with model: @article, url: "/articles/#{@article.id}", method: :patch do |f|
+    = form_with model: @article, url: "/articles/#{@article.id}",local: true, method: :patch do |f|
       .form-title
         %lavel.title-lavel
           title

@@ -44,6 +44,7 @@ body,html {
             vertical-align: middle;
           }
           .item-list-big {
+            width: 600px;
             position: relative;
             box-sizing: border-box;
             .item-list-content {
@@ -94,6 +95,22 @@ body,html {
     }
   }  
 }
+.pagination>li>a {
+  border: none;     /*枠線をなくす*/
+  color: #696969;    
+}
+.pagination>.active>a {     
+  background: #93c9ff;     /*背景の色を変える*/
+  border-radius: 15px;     /*角を丸くする*/
+}
+.pagination>li>a:hover {        
+  border-radius: 15px;    /*角を丸くする*/
+}
+
+.user2 a:visited {
+  color: black;
+  opacity: 0.4;
+}
 
 a {
   margin: 0 4px 0 4px;
@@ -111,14 +128,4 @@ a {
   opacity: 0.4;
 }
 
-.pagination>li>a {
-  border: none;     /*枠線をなくす*/
-  color: #696969;    
-}
-.pagination>.active>a {     
-  background: #93c9ff;     /*背景の色を変える*/
-  border-radius: 15px;     /*角を丸くする*/
-}
-.pagination>li>a:hover {        
-  border-radius: 15px;    /*角を丸くする*/
-}
+

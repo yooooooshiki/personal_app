@@ -5,14 +5,15 @@
       %span{:id => "article-#{@article.id}-like"}
         = render 'shared/likes', article: @article, like: @like
     .comment-stock
-      ストック
+      = button_to "ストックする", add_article_path(@article), method: :post  
     .comment-sns
       Twitter
   .comment-page-info
     .commnet-page-title
       = @article.title
     .comment-page-user
-      = @article.user.name
+      = link_to user_path(@article.user.id) do
+        = @article.user.name
     .comment-page-editbtn
       = link_to "Edit", edit_article_path(@article.id)
     .comment-page-delete

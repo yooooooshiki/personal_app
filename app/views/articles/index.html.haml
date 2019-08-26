@@ -18,19 +18,21 @@
                 %span.user1
                   by
                 %a.user2
-                  = article.user.name
+                  = link_to user_path(article.user.id) do
+                    = article.user.name
                 .time
                   = article.updated_at.strftime("%Y/%m/%d")
                 .good-mark
                   %a.comment
                     .action
-                      コ
                   %a.good
                     .action
-                      い
+                      %i.fas.fa-thumbs-up 
+                      %span
+                        = article.likes_count
                   %a.stock
                     .action
-                      = link_to "登録", add_article_path(article), method: :post 
+                      -# = link_to "登録", add_article_path(article), method: :post 
       .pagination
         = paginate(@articles)
     .hoge3
