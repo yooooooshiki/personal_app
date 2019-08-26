@@ -5,7 +5,8 @@
       %span{:id => "article-#{@article.id}-like"}
         = render 'shared/likes', article: @article, like: @like
     .comment-stock
-      = button_to "ストックする", add_article_path(@article), method: :post  
+      %span{:id => "article-#{@article.id}-favorite"}
+        = render 'shared/favorites', article: @article, favorite: @favorite
     .comment-sns
       Twitter
   .comment-page-info
@@ -36,3 +37,7 @@
   - if user_signed_in?
     / コメント入力欄をブログの詳細ページに表示するためのrender
     = render partial: 'comments/form', locals: { comment: @comment, article: @article }
+
+
+
+-# = button_to "ストックする", add_article_path(@article), method: :post  

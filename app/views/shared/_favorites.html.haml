@@ -1,0 +1,15 @@
+- if user_signed_in?
+  - if article.favorite_user(current_user.id)
+    = button_to article_favorite_path(article, favorite), method: :delete, remote: true do
+      %i.fas.fa-check ストック済み
+      -# %span
+      -#   = article.likes_count
+  - else
+    = button_to article_favorites_path(article), remote: true do
+      %i.fas.fa-folder-open
+      -# %span
+      -#   = article.likes_count
+- else
+  %i.fas.fa-folder-open
+  %span
+    -# = article.likes_count
