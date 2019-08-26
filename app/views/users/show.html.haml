@@ -21,7 +21,7 @@
   #programming_content.tab_content
     - @user.articles.each_with_index do |article, i|
       .tab-content-nakami
-        = link_to "削除", favorite_path(@favorites[i][:id]), method: :delete
+        -# = link_to "削除", article_favorite_path(@favorites[i][:id]), method: :delete do
         = link_to article_path(article.id) do
           = article.title
   #design_content.tab_content
