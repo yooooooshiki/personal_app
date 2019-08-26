@@ -12,9 +12,7 @@ Rails.application.routes.draw do
   end
 
   resources :articles do
-    member do #本一覧画面からお気に入り登録をする
-      post "add", to: "favorites#create"
-    end
+    resources :favorites, only: [:create, :destroy]
   end
 
   resources :users do
@@ -26,7 +24,7 @@ Rails.application.routes.draw do
   resources :relationships, only: [:create, :destroy]
 
 
-  resources :favorites, only: [:destroy]
+  # resources :favorites, only: [:destroy]
 
   resources :searches, only: [:index, :show]
   # resource :sessions, only: [:new, :create, :destroy]
