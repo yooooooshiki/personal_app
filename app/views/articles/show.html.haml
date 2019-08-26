@@ -15,9 +15,11 @@
       = link_to user_path(@article.user.id) do
         = @article.user.name
     .comment-page-editbtn
-      = link_to "Edit", edit_article_path(@article.id)
+      - if user_signed_in? && current_user.id == @article.user_id
+        = link_to "Edit", edit_article_path(@article.id)
     .comment-page-delete
-      = link_to "Delete", article_path, method: :delete
+      - if user_signed_in? && current_user.id == @article.user_id
+        = link_to "Delete", article_path, method: :delete
   .comment-page-content
     = simple_format(@article.content)    
   -# .comment-page-form-block
