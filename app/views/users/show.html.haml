@@ -13,12 +13,16 @@
   %label.tab_item{:for => "design"} 
     %i.fas.fa-users
   #all_content.tab_content
-    総合の内容がここに入ります
+    - @articles.each_with_index do |article,i|
+      .tab-content-nakami
+        = link_to article_path(article.id) do
+          = article.title
   #programming_content.tab_content
     - @user.articles.each_with_index do |article, i|
       .tab-content-nakami
         = link_to "削除", favorite_path(@favorites[i][:id]), method: :delete
-        = article.title
+        = link_to article_path(article.id) do
+          = article.title
   #design_content.tab_content
     .tab-content-nakami
       = render 'follow_form'
@@ -56,16 +60,4 @@
 -#     = render 'follow_form'
 -#     = render 'stats'
 -#   -# %li.hide 弱虫やーい。と囃し
-
-
-
-
-
-
-
-
-= link_to "ログアウト", destroy_user_session_path, method: :delete
-
-
-
 
