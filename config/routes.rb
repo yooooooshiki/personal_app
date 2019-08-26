@@ -33,6 +33,7 @@ Rails.application.routes.draw do
 
   resources :users
   devise_scope :user do
+    get 'sign_in', to: 'users/sessions#new'
     get 'sign_up', to: 'users/registrations#new'
     get '/users/sign_out', to: 'devise/sessions#destroy'
   end

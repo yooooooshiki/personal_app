@@ -23,14 +23,14 @@
                 .time
                   = article.updated_at.strftime("%Y/%m/%d")
                 .good-mark
-                  %a.comment
+                  .comment
                     .action
-                  %a.good
+                  .good
                     .action
                       %i.fas.fa-thumbs-up 
                       %span
                         = article.likes_count
-                  %a.stock
+                  .stock
                     .action
                       -# = link_to "登録", add_article_path(article), method: :post 
       .pagination

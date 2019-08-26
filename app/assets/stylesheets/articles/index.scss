@@ -107,9 +107,16 @@ body,html {
   border-radius: 15px;    /*角を丸くする*/
 }
 
-.user2 a:visited {
-  color: black;
+a:hover {
   opacity: 0.4;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
 }
 
 a {
@@ -126,6 +133,10 @@ a {
 .item-list-block a:visited {
   color: #696969;
   opacity: 0.4;
+}
+
+.user2 a:visited {
+  color: black;
 }
 
 
