@@ -47,7 +47,8 @@ input[name="tab_item"] {
     border: 1px solid #e8e8e8;
     height:90px;
     padding: 5px 10px;
-    line-height: 90px;  
+    line-height: 20px;
+    word-wrap:break-all;
   }
   display: none;
   // padding: 40px 40px 0;

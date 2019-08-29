@@ -25,6 +25,7 @@ class ArticlesController < ApplicationController
     @comment = Comment.new #①
     @comments = @article.comments #②
     @like = Like.find_by(user_id: current_user.id, article_id: params[:id]) if user_signed_in?
+    @favorite = Favorite.find_by(user_id: current_user.id, article_id: params[:id]) if user_signed_in?
   end
 
   def edit
